@@ -1,25 +1,32 @@
 .jumbotron {
-  padding-top: 5rem;
+    padding-top: 5rem;
 }
 
 section {
-  scroll-margin-top: 60px;
+    scroll-margin-top: 60px;
 }
 
-#project, .kosong, .jumbotron {
-  background-color: #e2edff;
+#project,
+.kosong,
+.jumbotron {
+    background-color: #e2edff;
 }
 
 #project .card {
-  box-shadow: 0 2px 3px rgba(0,0,0,.5);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+#gallery .row > * {
+    /* semua yg ada didlm row persis setelahnya */
+    padding: 0;
 }
 
 footer {
-  margin-top: -1px;
-  font-weight: 300;
+    margin-top: -1px;
+    font-weight: 300;
 }
 
 footer p a {
-  text-decoration: none;
-  border-bottom: 1.3px solid white;
+    text-decoration: none;
+    border-bottom: 1.3px solid white;
 }
