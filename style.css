@@ -21,6 +21,38 @@ section {
     padding: 0;
 }
 
+#gallery .row:nth-child(2) img {
+    padding: 2px;
+}
+
+#gallery .row:nth-child(2) img:hover {
+    opacity: 0.6;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.img-full {
+    display: block;
+    margin: 30vh auto;
+    width: 80%;
+    max-width: 600px;
+    animation: zoom 500ms;
+}
+
+#contact {
+    /* background-color: #e2edffd8; */
+    background-color: #e2edffb4;
+}
+
 footer {
     margin-top: -1px;
     font-weight: 300;
@@ -29,4 +61,15 @@ footer {
 footer p a {
     text-decoration: none;
     border-bottom: 1.3px solid white;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
