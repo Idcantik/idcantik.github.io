@@ -21,11 +21,11 @@ section {
     padding: 0;
 }
 
-#gallery .row:nth-child(2) img {
+#gallery .row:nth-child(2) #img-thumb {
     padding: 2px;
 }
 
-#gallery .row:nth-child(2) img:hover {
+#gallery .row:nth-child(2) #img-thumb:hover {
     opacity: 0.6;
 }
 
@@ -42,7 +42,7 @@ section {
 
 .img-full {
     display: block;
-    margin: 30vh auto;
+    margin: 20vh auto;
     width: 80%;
     max-width: 600px;
     animation: zoom 500ms;
@@ -72,4 +72,96 @@ footer p a {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+/* My newProject */
+.new-box {
+    position: relative;
+    background-color: #0D6EFD;
+    border-radius: 10px;
+    height: 530px;
+    transform-style: preserve-3d;
+}
+.new-box::before {
+    content: "New";
+    position: absolute;
+    font-size: 8rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.15;
+    transition: .5s;
+}
+
+.new-box:hover::before {
+    opacity: .45;
+}
+
+.new-box::after {
+    content: "Project";
+    position: absolute;
+    font-size: 5.5rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    opacity: 0.15;
+    transition: .5s;
+}
+
+.new-box:hover::after {
+    opacity: .45;
+}
+
+.new-text {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    font-size: 1.7rem;
+    text-align: center;
+    text-shadow: 1px 1px rgb(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transform: translate3d(0, 0, 30px);
+    transition: .5s;
+}
+.new-box:hover .new-text {
+    font-size: 2.1rem;
+    top: 10px;
+    opacity: 1;
+}
+
+.detail-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 90px);
+    opacity: 0;
+    transition: .5s;
+}
+.new-box:hover .detail-buttons {
+    opacity: 1;
+    box-shadow: 0 0 2px black;
+    bottom: 5px;
+}
+.detail-buttons:hover {
+    transform: translate3d(-50%, 0, 90px) scale(1.15);
+}
+
+.new-vector {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 60px);
+    width: 80%;
+    max-width: 300px;
+    transition: .5s;
+}
+
+.new-box:hover .new-vector {
+    transform: translate3d(-50%, -50%, 60px) scale(1.2);
 }
